@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		632219852CB4173D00606A25 /* Custodian.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Custodian.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		632219852CB4173D00606A25 /* teaBASE.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teaBASE.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		632219922CB4173D00606A25 /* Exceptions for "Custodian" folder in "Custodian" target */ = {
+		632219922CB4173D00606A25 /* Exceptions for "Sources" folder in "teaBASE" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 632219842CB4173D00606A25 /* Custodian */;
+			target = 632219842CB4173D00606A25 /* teaBASE */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		632219872CB4173D00606A25 /* Custodian */ = {
+		632219872CB4173D00606A25 /* Sources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				632219922CB4173D00606A25 /* Exceptions for "Custodian" folder in "Custodian" target */,
+				632219922CB4173D00606A25 /* Exceptions for "Sources" folder in "teaBASE" target */,
 			);
-			path = Custodian;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -45,7 +45,7 @@
 		6322197B2CB4173D00606A25 = {
 			isa = PBXGroup;
 			children = (
-				632219872CB4173D00606A25 /* Custodian */,
+				632219872CB4173D00606A25 /* Sources */,
 				632219862CB4173D00606A25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 		632219862CB4173D00606A25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				632219852CB4173D00606A25 /* Custodian.prefPane */,
+				632219852CB4173D00606A25 /* teaBASE.prefPane */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,27 +71,29 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		632219842CB4173D00606A25 /* Custodian */ = {
+		632219842CB4173D00606A25 /* teaBASE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 632219932CB4173D00606A25 /* Build configuration list for PBXNativeTarget "Custodian" */;
+			buildConfigurationList = 632219932CB4173D00606A25 /* Build configuration list for PBXNativeTarget "teaBASE" */;
 			buildPhases = (
 				632219802CB4173D00606A25 /* Headers */,
 				632219812CB4173D00606A25 /* Sources */,
 				632219822CB4173D00606A25 /* Frameworks */,
 				632219832CB4173D00606A25 /* Resources */,
+				63B188092CBD6AE30081E570 /* Download Binaries */,
+				6347BBC62CBD6ECA00DA6544 /* Copy Binaries to Bundle */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				632219872CB4173D00606A25 /* Custodian */,
+				632219872CB4173D00606A25 /* Sources */,
 			);
-			name = Custodian;
+			name = teaBASE;
 			packageProductDependencies = (
 			);
-			productName = Custodian;
-			productReference = 632219852CB4173D00606A25 /* Custodian.prefPane */;
+			productName = teaBASE;
+			productReference = 632219852CB4173D00606A25 /* teaBASE.prefPane */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6322197F2CB4173D00606A25 /* Build configuration list for PBXProject "Custodian" */;
+			buildConfigurationList = 6322197F2CB4173D00606A25 /* Build configuration list for PBXProject "teaBASE" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -122,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				632219842CB4173D00606A25 /* Custodian */,
+				632219842CB4173D00606A25 /* teaBASE */,
 			);
 		};
 /* End PBXProject section */
@@ -130,12 +132,57 @@
 /* Begin PBXResourcesBuildPhase section */
 		632219832CB4173D00606A25 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6347BBC62CBD6ECA00DA6544 /* Copy Binaries to Bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(DERIVED_FILE_DIR)/pkgx",
+				"$(DERIVED_FILE_DIR)/bpb",
+			);
+			name = "Copy Binaries to Bundle";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLES_FOLDER_PATH)/bpb",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLES_FOLDER_PATH)/pkgx",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "MYPATH=\"${TARGET_BUILD_DIR}/${EXECUTABLES_FOLDER_PATH}\"\nmkdir -p \"${MYPATH}\"\ncp \"${DERIVED_FILE_DIR}\"/pkgx \"${MYPATH}\"\ncp \"${DERIVED_FILE_DIR}\"/bpb \"${MYPATH}\"\n";
+		};
+		63B188092CBD6AE30081E570 /* Download Binaries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Download Binaries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/pkgx",
+				"$(DERIVED_FILE_DIR)/bpb",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "curl -o \"${DERIVED_FILE_DIR}\"/pkgx --compressed -f --proto '=https' https://pkgx.sh/$(uname)/$(uname -m)\nchmod +x \"${DERIVED_FILE_DIR}\"/pkgx\ncp \"$(\"${DERIVED_FILE_DIR}\"/pkgx +bpb -- which bpb)\" \"${DERIVED_FILE_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		632219812CB4173D00606A25 /* Sources */ = {
@@ -155,13 +202,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Custodian/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainNibFile = Custodian;
-				INFOPLIST_KEY_NSPrincipalClass = Custodian;
+				INFOPLIST_KEY_NSMainNibFile = teaBASE;
+				INFOPLIST_KEY_NSPrincipalClass = teaBASE;
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.pkgx.Custodian;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pkgx.teaBASE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				WRAPPER_EXTENSION = prefPane;
@@ -175,13 +223,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Custodian/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainNibFile = Custodian;
-				INFOPLIST_KEY_NSPrincipalClass = Custodian;
+				INFOPLIST_KEY_NSMainNibFile = teaBASE;
+				INFOPLIST_KEY_NSPrincipalClass = teaBASE;
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.pkgx.Custodian;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pkgx.teaBASE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				WRAPPER_EXTENSION = prefPane;
@@ -306,7 +355,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6322197F2CB4173D00606A25 /* Build configuration list for PBXProject "Custodian" */ = {
+		6322197F2CB4173D00606A25 /* Build configuration list for PBXProject "teaBASE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				632219962CB4173D00606A25 /* Debug */,
@@ -315,7 +364,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		632219932CB4173D00606A25 /* Build configuration list for PBXNativeTarget "Custodian" */ = {
+		632219932CB4173D00606A25 /* Build configuration list for PBXNativeTarget "teaBASE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				632219942CB4173D00606A25 /* Debug */,
