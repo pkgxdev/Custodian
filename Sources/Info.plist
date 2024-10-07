@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>NSPrefPaneIconFile</key>
-	<string>Custodian.tiff</string>
+	<string>Icon.svg</string>
 	<key>NSPrefPaneIconLabel</key>
-	<string>Custodian</string>
+	<string>teaBASE β</string>
 </dict>
 </plist>
